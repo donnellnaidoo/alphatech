@@ -1,81 +1,131 @@
-# Startup - Free Next.js Startup Website Template
+# AlphaTech Website
 
-Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+Professional technology consulting website built with Next.js 16 and Tailwind CSS.
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+## Overview
 
-### ✨ Key Features
+AlphaTech is positioned as a modern, enterprise-focused technology consulting firm serving startups, SMBs, and enterprise clients.
 
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+The site emphasizes:
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+- IT strategy and digital transformation
+- Cloud solutions and migration
+- Software architecture and development
+- Cybersecurity and risk management
+- Data, analytics, and AI consulting
+- DevOps and infrastructure optimization
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+## Tech Stack
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- next-themes (dark mode)
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+## Current Site Structure
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+### Main Routes
 
-- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+- `/` Home
+- `/about` About Us
+- `/contact` Contact
+- `/blog` Blog/Insights page (route available)
+- `/error` Error page
 
-- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+### Home Page Sections
 
-- [📦 Download](https://nextjstemplates.com/templates/startup)
+- Hero
+- Services
+- Video
+- About (two sections)
+- Testimonials
+- Contact CTA/form
 
-- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+## Navigation
 
-- [🔌 Documentation](https://nextjstemplates.com/docs)
+Current navbar links:
 
-### ⚡ Deploy Now
+- Home
+- About Us
+- Services
+- Contact
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+Configured in: `src/components/Header/menuData.tsx`
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+## Branding & Assets
 
-### 📄 License
+### Navbar Logo
 
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
+- Uses: `public/images/brands/dark-mode-logo (1).png`
+- Configured in: `src/components/Header/index.tsx`
 
-### 💜 Support
+### Favicon
 
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
+- Uses: `public/images/brands/alphatech-favicon.png`
+- Configured in: `src/app/layout.tsx`
 
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
+### Video Section
 
-### Update Log
+- YouTube video ID: `AMFlQHVcDqs`
+- Thumbnail: `https://i.ytimg.com/vi/AMFlQHVcDqs/hqdefault.jpg`
+- Configured in: `src/components/Video/index.tsx`
 
-**03 December 2025**
+## Getting Started
 
-- Upgrade to Next.js 16
-- Fixed video modal issue
+### Prerequisites
 
-**10 April 2025**
+- Node.js 20+
+- npm
 
-- Fix peer deps issue with Next.js 15
-- Upgrade to tailwind v4
-- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
-- Re-wrote blog details page with icons separation, fallback author image and better markup.
-- Fixed duplicate key errors on homepage.
-- Separated icons on theme-switcher button, and refactored scroll-to-top button.
+### Install
 
-**29 Jan 2025**
+```bash
+npm install
+```
 
-- Upgraded to Next.js 15
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000
+
+### Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## Available Scripts
+
+- `npm run dev` — Start dev server
+- `npm run build` — Create production build
+- `npm run start` — Run production server
+- `npm run lint` — Run Next.js lint checks
+
+## Content & Component Map
+
+- Home page composition: `src/app/page.tsx`
+- Header and navbar: `src/components/Header/index.tsx`
+- Services section: `src/components/Features/index.tsx` and `src/components/Features/featuresData.tsx`
+- About sections: `src/components/About/AboutSectionOne.tsx`, `src/components/About/AboutSectionTwo.tsx`
+- Testimonials: `src/components/Testimonials/index.tsx`
+- Contact section: `src/components/Contact/index.tsx`
+- Footer: `src/components/Footer/index.tsx`
+
+## Security & Quality Notes
+
+- Build currently passes with no TypeScript/Next build errors.
+- Production dependency audit reports no known vulnerabilities (`npm audit --omit=dev`).
+- Contact forms are currently UI-only (no backend submission handler).
+
+## Deployment
+
+Deploy to any Node-compatible platform (for example Vercel, Azure, Netlify, or a self-hosted Node environment) using the production build output.
+
+## License
+
+This repository is distributed under the license in `LICENSE`.
